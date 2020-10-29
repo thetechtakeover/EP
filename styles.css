@@ -4,7 +4,6 @@
 }
 
 body {
-    background-color: rgb(255, 255, 255);
     color: black;
     font-size: 18px;
     font-family: 'Noto Sans JP', sans-serif;
@@ -19,6 +18,11 @@ body {
     justify-content: center;
 }
 
+#blackWrapper {
+    background-image: linear-gradient(to left, #fff, rgb(107, 92, 8), #000, rgb(105, 92, 8), #fff);
+    width: 100vw;
+    height: auto;
+}
 /*navigation */
 nav ul {
     list-style-type: none;
@@ -27,12 +31,12 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 70px;
+   display: inline-block;
   }
 
 nav ul li a {
     text-decoration: none;
+    color: #fd0;
 }
 
 .coverStory {
@@ -44,12 +48,25 @@ nav ul li a {
     text-align: center;
     background-color: #fd0;
     color: #000;
+    border-radius: 3px;
     font-size: 14px;
     font-weight: 600;
     padding: 6px 10px 4px;
     text-transform: uppercase;
     line-height: 14px;
     margin: 40px auto 20px;
+    
+}
+
+.coverStory a {
+    text-decoration: none;
+    color: black;
+    transition: 1s linear;
+}
+
+.coverStory a:hover {
+    transform: scale(1);
+    cursor: crosshair;
 }
 
 .mainHeading {
@@ -60,29 +77,45 @@ nav ul li a {
     word-spacing: .1em;
     display: block;
     text-align: center;
-    margin:40px auto 10px auto;
+    margin:60px auto 10px auto;
 }
 
 .subHeading {
-    color: #989898;
+    color: #a7a6a6;
     font-size: 1.60rem;
     font-style: inherit;
+    font-weight: 700;
     text-align: center;
     margin: 0 auto;
     padding: 0;
+    text-transform: capitalize;
 }
 
 
 .heroImage {
-    background-image:linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0)), url(./images/journey.jpg);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.836),rgba(0, 0, 0, 0.24)), url(./images/Black\ and\ Yellow\ Abstract.jpg);
     width: 100vw;
-    height: 100vh;
+    height: 75vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
-    width: 100vw;
-    margin: 80px auto;
+    margin: 60px auto 80px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroText {
+    display: inline-block;
+    color: #fff;
+    border-top: 10px solid #fff;
+    border-bottom: 10px solid #fff;
+    font-size: 4.5em;
+    font-weight: 700;
+    line-height: 1.5em;
+    text-align: center;
+    padding: 30px 70px;
 }
 
 .heroHeading {
@@ -118,17 +151,19 @@ nav ul li a {
 .fullImage {
     width: 100%;
     height: auto;
-    margin: 80px auto;
+    margin: 50px auto;
+    border-radius: 40% 5%;
 }
 .pullQuote {
     font-weight: 400;
-    font-size: 2em;
+    font-size: 1.5em;
     line-height: 1.2em;
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
     padding: 30px 0;
-    margin: 60px 0;
+    margin: 50px 0;
     text-align: center;
+    text-shadow: 3px 2px 2px rgb(158, 139, 17);
 }
 iframe {
     margin: 80px auto;
